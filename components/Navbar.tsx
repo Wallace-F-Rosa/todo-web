@@ -11,8 +11,8 @@ export default function Navbar() {
         <nav className="w-full px-4 py-4 h-15 bg-primary-dark flex flex-row border-b-2 border-gray-400">
             <Image src={TodoLogo} alt="// TODO"></Image>
             <div className='w-full flex justify-end gap-x-4 justify-items-center'>
-                <Link href={'/login'} className='text-white2 hover:text-secondary-dark'>Log in</Link>
-                <Link href={'/register'} className='text-white2 hover:text-secondary-dark'>Register</Link>
+                <Link href={'/login'} className='text-white hover:text-secondary-dark'>Log in</Link>
+                <Link href={'/register'} className='text-white hover:text-secondary-dark'>Register</Link>
             </div>
         </nav>
     )

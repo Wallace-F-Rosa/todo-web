@@ -13,7 +13,7 @@ export default function Home() {
       done: false
   }]
   return (
-    <main className="w-screen h-screen bg-white2">
+    <main className="w-screen h-screen bg-white">
       <Navbar/>
       <CardContainer cardsData={data}/>
     </main>
