@@ -1,8 +1,8 @@
 export type TaskDTO = {
-    id: string,
-    name: string,
-    done: boolean,
-    description: string,
-    userId: String,
+    id: string
+    name: string
+    done: boolean
+    description: string
+    userId: String
     createdAt: Date
 }

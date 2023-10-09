@@ -1,8 +1,9 @@
 Web application for the [todo-app](https://github.com/Wallace-F-Rosa/todo-app) built using [Next](https://nextjs.org/).
 Provides a web interface to :
-- [ ] Register user
-- [ ] Log in
-- [ ] Manage Tasks
+
+-   [ ] Register user
+-   [ ] Log in
+-   [ ] Manage Tasks
 
 ## Run the appllication
 
