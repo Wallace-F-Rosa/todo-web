@@ -1,12 +1,34 @@
+import { TaskDTO } from '@/app/dto/task.dto'
 import { Button, Card, Label, Modal, TextInput } from 'flowbite-react'
-import { useState } from 'react'
+import { Dispatch, SetStateAction, useRef, useState } from 'react'
 import { GrAdd } from 'react-icons/gr'
 
-export default function AddTaskCard() {
+export default function AddTaskCard({
+    tasks,
+    setTasks,
+}: {
+    tasks: TaskDTO[]
+    setTasks: Dispatch<SetStateAction<TaskDTO[]>>
+}) {
     const [visible, setVisible] = useState(false)
 
     const showModalOnClick = () => {
         setVisible((visible) => !visible)
+    }
+
+    let taskTitle = ''
+    let taskDescription = ''
+    const createNewTask = () => {
+        console.log(taskTitle, taskDescription)
+        const task: TaskDTO = {
+            id: (tasks.length + 1).toString(),
+            createdAt: new Date(),
+            description: taskDescription,
+            name: taskTitle,
+            done: false,
+            userId: '2',
+        }
+        setTasks((tasks) => [...tasks, task])
     }
 
     return (
@@ -34,6 +56,10 @@ export default function AddTaskCard() {
                                     placeholder='Task Title'
                                     required
                                     type='text'
+                                    minLength={2}
+                                    onChange={(event) =>
+                                        (taskTitle = event.currentTarget.value)
+                                    }
                                 />
                             </div>
                             <div>
@@ -48,6 +74,10 @@ export default function AddTaskCard() {
                                     placeholder='Task Description'
                                     required
                                     type='text'
+                                    onChange={(event) =>
+                                        (taskDescription =
+                                            event.currentTarget.value)
+                                    }
                                 />
                             </div>
                         </div>
@@ -56,6 +86,7 @@ export default function AddTaskCard() {
                         <Button
                             type='submit'
                             className='bg-primary-dark text-white'
+                            onClick={createNewTask}
                         >
                             Create
                         </Button>

@@ -1,5 +1,5 @@
 export type TaskDTO = {
-    id: string
+    id: string | null
     name: string
     done: boolean
     description: string
