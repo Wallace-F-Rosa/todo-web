@@ -1,6 +1,6 @@
 'use client'
 import { TaskDTO } from '@/app/dto/task.dto'
-import TaskCard from './Card'
+import TaskCard from './TaskCard'
 import AddTaskCard from './AddTaskCard'
 import { Dispatch, SetStateAction } from 'react'
 
