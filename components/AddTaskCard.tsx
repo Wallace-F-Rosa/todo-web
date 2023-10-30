@@ -1,7 +1,7 @@
 import { TaskDTO } from '@/app/dto/task.dto'
 import { Button, Card, Label, Modal, TextInput } from 'flowbite-react'
 import { Dispatch, SetStateAction, useRef, useState } from 'react'
-import { GrAdd } from 'react-icons/gr'
+import { HiPlus } from 'react-icons/hi'
 
 export default function AddTaskCard({
     tasks,
@@ -33,12 +33,12 @@ export default function AddTaskCard({
 
     return (
         <>
-            <Card
-                className='items-center border-dashed border-secondary-dark bg-white hover:cursor-pointer hover:bg-primary-dark'
+            <div
+                className='flex items-center justify-center rounded bg-white outline-dashed outline-2 outline-secondary-dark hover:cursor-pointer hover:bg-primary-dark'
                 onClick={showModalOnClick}
             >
-                <GrAdd size={28} />
-            </Card>
+                <HiPlus className='fill-secondary-dark' size={32} />
+            </div>
             <Modal
                 show={visible}
                 onClose={() => setVisible((visible) => !visible)}
