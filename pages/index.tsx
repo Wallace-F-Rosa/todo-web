@@ -1,8 +1,8 @@
 'use client'
 import Navbar from '@/components/Navbar'
 import CardContainer from '@/components/CardContainer'
-import './globals.css'
-import { TaskDTO } from './dto/task.dto'
+import '@/app/globals.css'
+import { TaskDTO } from '@/app/dto/task.dto'
 import { useState } from 'react'
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
     let [tasks, setTasks] = useState(data)
     return (
         <main className='h-screen w-screen bg-white'>
-            <Navbar />
+            <Navbar variant={'logged'} />
             <CardContainer cardsData={tasks} setCardsData={setTasks} />
         </main>
     )
