@@ -14,7 +14,9 @@ export default function CardContainer({
 }) {
     let taskCards = []
     for (const card of cardsData) {
-        taskCards.push(<TaskCard task={card} key={card.id} />)
+        taskCards.push(
+            <TaskCard task={card} key={card.id} setTasks={setCardsData} />
+        )
     }
     return (
         <div className='grid w-full grid-cols-4 gap-2 p-2'>
